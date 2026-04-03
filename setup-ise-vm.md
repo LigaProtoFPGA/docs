@@ -1,118 +1,120 @@
-# Instalação da ISE 14.7 VM (Nexys 1 e 2)
+# ISE 14.7 VM Installation (Nexys 1 and 2)
 
-> ⚠️ Você vai precisar de pelo menos **20 GB** de espaço em disco e bastante paciência — alguns passos demoram muito.
-> 
+> [!CAUTION]
+> You will need at least **20 GB** of free disk space and a lot of patience — some steps take a long time.
 
 ---
 
-## 📦 1. Baixar os pacotes
+## 📦 1. Download Packages
 
 - **Oracle VirtualBox 7.1.0** → [Download](https://download.virtualbox.org/virtualbox/7.1.0/VirtualBox-7.1.0-164728-Win.exe)
 - **VirtualBox Extension Pack 7.1.0** → [Download](https://download.virtualbox.org/virtualbox/7.1.0/Oracle_VirtualBox_Extension_Pack-7.1.0.vbox-extpack)
-- **ISE 14.7 VM (AMD/Xilinx)** — pode ser necessário criar conta gratuita na AMD → [Download](https://www.xilinx.com/downloadNav/vivado-design-tools/archive-ise.html) *(+15 GB, escolha a versão Windows 10)*
+- **ISE 14.7 VM (AMD/Xilinx)** — a free AMD account may be required → [Download](https://www.xilinx.com/downloadNav/vivado-design-tools/archive-ise.html) *(+15 GB, choose the Windows 10 version)*
 
 ---
 
-## 🔧 2. Pré-requisitos antes de instalar o VirtualBox
+## 🔧 2. Prerequisites before installing VirtualBox
 
-Se o instalador do VirtualBox reclamar de dependências, instale nesta ordem:
+If the VirtualBox installer complains about dependencies, install them in this order:
 
 **2.1 — Microsoft Visual C++ 2019 Redistributable**
 → [Download vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 **2.2 — Python**
-→ [Download python-3.12.6-amd64.exe](https://www.python.org/ftp/python/3.12.6/python-3.12.6-amd64.exe)*(nesta versão o comando é `py`, não `python`)*
+→ [Download python-3.12.6-amd64.exe](https://www.python.org/ftp/python/3.12.6/python-3.12.6-amd64.exe) *(in this version, the command is `py`, not `python`)*
 
 **2.3 — Win32 API (pywin32)**
-Abra o Prompt de Comando e rode:
+Open the Command Prompt and run:
 
 `py -m pip install --upgrade pywin32`
 
 ---
 
-## ⚙️ 3. Instalar o VirtualBox
+## ⚙️ 3. Install VirtualBox
 
-1. Instale o VirtualBox normalmente
-2. Ao abrir pela primeira vez, aceite a instalação do **Extension Pack** (arquivo `.vbox-extpack` baixado no passo 1)
-
----
-
-## 📂 4. Importar a VM do ISE 14.7
-
-1. Descompacte o arquivo baixado da AMD *(demora bastante)*
-2. Abra o VirtualBox → menu **File** → **Import Appliance**
-3. Navegue até o arquivo `14.7_VM.ova` dentro da pasta `Xilinx_ISE_14.7_Win10_14.7_VM_0213_1\ova`
-4. Confirme a importação *(demora bastante também)*
-
-> 💡 Os arquivos também estão disponíveis em pendrive de 128 GB — fale com o professor Ney.
-> 
+1. Install VirtualBox normally.
+2. When opening for the first time, accept the installation of the **Extension Pack** (the `.vbox-extpack` file downloaded in step 1).
 
 ---
 
-## 🛠️ 5. Configurar a VM antes de rodar
+## 📂 4. Import the ISE 14.7 VM
 
-Com a VM **desligada**, abra as configurações dela no VirtualBox:
+1. Unzip the file downloaded from AMD *(this takes a while)*.
+2. Open VirtualBox → **File** menu → **Import Appliance**.
+3. Navigate to the `14.7_VM.ova` file inside the folder `Xilinx_ISE_14.7_Win10_14.7_VM_0213_1\ova`.
+4. Confirm the import *(this also takes a long time)*.
 
-**5.1 — Memória**
-Em **Sistema**, reduza a memória para **1909 MB** (deve ficar abaixo da metade da RAM do seu PC)
-
-**5.2 — Controladora gráfica**
-Em **Tela**, mantenha a opção **VBoxSVGA**
-
-**5.3 — Rede**
-Em **Rede → Adaptador 1**, selecione **NAT** no menu "Conectado a:"
-
-**5.4 — Pasta compartilhada** *(para acessar seus projetos dentro da VM)*
-Em **Pastas Compartilhadas**, adicione uma nova pasta:
-
-- Caminho: `C:\Xilinx\ise_projs` (ou onde você salvou)
-- Nome: `ise_projs`
-- Marque **Montar Automaticamente** → OK
-
-Para criar um atalho no Desktop da VM, abra um terminal dentro dela e rode:
-
-`cd /home/ise/Desktopln -s /home/ise/ise_projs ise_projs`
+> [!TIP]
+> The files are also available on a 128 GB flash drive — contact Professor Ney.
 
 ---
 
-## 🔑 6. Configurar a licença
+## 🛠️ 5. Configure the VM before running
 
-Abra um terminal dentro da VM e edite o arquivo `~/.bashrc`:
+With the VM **turned off**, open its settings in VirtualBox:
+
+**5.1 — Memory**
+In **System**, reduce the memory to **1909 MB** (it should be less than half of your PC's RAM).
+
+**5.2 — Graphics Controller**
+In **Display**, keep the **VBoxSVGA** option.
+
+**5.3 — Network**
+In **Network → Adapter 1**, select **NAT** in the "Attached to:" menu.
+
+**5.4 — Shared Folder** *(to access your projects inside the VM)*
+In **Shared Folders**, add a new folder:
+
+- Path: `C:\Xilinx\ise_projs` (or wherever you saved your work)
+- Name: `ise_projs`
+- Check **Auto-mount** → OK
+
+To create a shortcut on the VM's Desktop, open a terminal inside the VM and run:
+
+`cd /home/ise/Desktop && ln -s /home/ise/ise_projs ise_projs`
+
+---
+
+## 🔑 6. Configure the License
+
+Open a terminal inside the VM and edit the `~/.bashrc` file:
 
 `nano /home/ise/.bashrc`
 
-Adicione as duas linhas abaixo no final do arquivo:
+Add the following two lines at the end of the file:
 
-`export LM_LICENSE_FILE=2100@172.65.212.135:8888export XILINXD_LICENSE_FILE=2100@paxos.inf.pucrs.br:8888`
+`export LM_LICENSE_FILE=2100@172.65.212.135:8888`
+`export XILINXD_LICENSE_FILE=2100@paxos.inf.pucrs.br:8888`
 
-Salve com `Ctrl+O` e feche com `Ctrl+X`.
+Save with `Ctrl+O` and exit with `Ctrl+X`.
 
-Depois, edite o script de lançamento do ISE:
+Then, edit the ISE launch script:
 
-`cd /opt/Xilinx/14.7/ISE_DS/commonsudo nano app_launcher.sh`
+`cd /opt/Xilinx/14.7/ISE_DS/common`
+`sudo nano app_launcher.sh`
 
-Logo abaixo da primeira linha (`#!/bin/bash`), adicione:
+Right below the first line (`#!/bin/bash`), add:
 
 `source /home/ise/.bashrc`
 
-Salve e feche.
+Save and exit.
 
 ---
 
-## ⚠️ 7. Erro de licença durante "Map"?
+## ⚠️ 7. License error during "Map"?
 
-Se aparecer erro de licença no passo **Implement Design → Map**, siga estes passos:
+If a license error appears during the **Implement Design → Map** step, follow these steps:
 
-1. Anote o `hostid` mencionado no erro
-2. Feche a VM
-3. No VirtualBox, vá em **Rede → Adaptador 1 → Configurações Avançadas**
-4. Troque o **Endereço MAC** para: `08002768C935`
-5. Clique OK e rode a VM novamente
+1. Note the `hostid` mentioned in the error.
+2. Close the VM.
+3. In VirtualBox, go to **Network → Adapter 1 → Advanced**.
+4. Change the **MAC Address** to: `08002768C935`
+5. Click OK and run the VM again.
 
 ---
 
-## ✅ 8. Tudo pronto!
+## ✅ 8. All set!
 
-O ambiente está configurado. Agora é só seguir os primeiros tutoriais no GitHub da liga para começar a trabalhar com a placa:
+The environment is configured. Now just follow the first tutorials on the league's GitHub to start working with the board:
 
-🔗 *Link do GitHub em breve*
+🔗 *GitHub link coming soon*
