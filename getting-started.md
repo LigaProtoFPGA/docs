@@ -1,33 +1,33 @@
-# Por onde começar
+# Getting Started
 
-Bem-vindo à liga! Este guia é o seu ponto de partida. Siga na ordem e você não vai ficar perdido.
-
----
-
-## 1️⃣ Instale os softwares
-
-Antes de qualquer coisa, você precisa deixar o ambiente pronto na sua máquina.
-
-Identifique qual placa você vai usar e siga o tutorial correspondente na página Softwares Necessários:
-
-- 🖥️ **Nexys 1 ou Nexys 2**
-- ⚡ **Nexys A7 (Artix-7)**
-
-> 💡 Se não souber qual placa é a sua, pergunte para um membro mais antigo ou para o professor antes de instalar qualquer coisa.
-> 
+Welcome to the league! This guide is your starting point. Follow these steps in order to stay on track.
 
 ---
 
-## 2️⃣ Siga os primeiros tutoriais
+## 1. Software Installation
 
-Com o ambiente pronto, siga os tutoriais introdutórios na ordem abaixo.
+Before anything else, you need to set up the environment on your machine.
 
-🔗 *Em breve no GitHub*
+Identify which board you will be using and follow the corresponding tutorial on the **Software Setup** page:
+
+- **Nexys 1 or Nexys 2**
+- **Nexys A7 (Artix-7)**
+
+> [!TIP]
+> If you are unsure which board you have, ask a senior member or the professor before installing anything.
 
 ---
 
-## ❓ Travou em algum passo?
+## 2. Follow the Introductory Tutorials
 
-- Confira se seguiu o tutorial corretamente do início
-- Pergunte no grupo da liga
-- Fale com um membro mais antigo
+Once your environment is ready, follow the introductory tutorials in the order listed below.
+
+*Coming soon to GitHub*
+
+---
+
+## Stuck on a Step?
+
+- Double-check if you followed the tutorial correctly from the beginning.
+- Ask in the league's communication group.
+- Reach out to a senior member.
