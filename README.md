@@ -8,11 +8,11 @@ This repository is the central knowledge base for **ProtoFPGA**. It contains all
 
 | Section | Purpose | Link |
 | :--- | :--- | :--- |
-| **Getting Started** | Onboarding, meetings, and team dynamics | [View](./getting-started.md) |
-| **Software Setup** | Installation of Vivado, Quartus, and ISE | [View](./software.md) |
-| **Git Guide** | Basic workflow for contributing to the Org | [View](./git-guide.md) |
-| **Style Guide** | Coding and repository standards | [View](./style-guide.md) |
-| **Infrastructure** | Laboratory rules and hardware resources | [View](./infrastructure.md) |
+| **Getting Started** | The step-by-step path for new members to begin developing | [View](./getting-started.md) |
+| **Software Setup** | Detailed installation guides for Vivado and ISE VM | [View](./software.md) |
+| **Git Guide** | How to clone, commit, and push code to our repositories | [View](./git-guide.md) |
+| **Style Guide** | Coding standards and repository folder organization | [View](./style-guide.md) |
+| **Infrastructure** | Laboratory location and available hardware resources | [View](./infrastructure.md) |
 
 ---
 
