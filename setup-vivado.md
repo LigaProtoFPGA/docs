@@ -1,89 +1,86 @@
-# Instalação do Vivado + Vitis (Nexys A7 — Artix-7)
+# Vivado + Vitis Installation Guide (Nexys A7 — Artix-7)
 
-> ⚠️ Separe pelo menos **2 horas** e 85 **GB** de espaço em disco. A instalação é pesada mas só precisa ser feita uma vez.
-> 
-
----
-
-## 📦 1. Baixar o instalador
-
-1. Acesse a página de downloads da AMD/Xilinx:
-https://www.xilinx.com/support/download.html
-2. Localize a seção **Vivado™ Edition — 2025.1**
-3. Selecione **Self Extracting Web Installer** para o seu sistema operacional
-4. Faça login ou crie uma conta gratuita para iniciar o download
+> [!CAUTION]
+> Allocate at least **2 hours** and **85 GB** of disk space. This is a heavy installation, but it only needs to be done once.
 
 ---
 
-## ⚙️ 2. Instalar o Vivado + Vitis
+## 1. Download the Installer
 
-1. Execute o instalador baixado e clique em **Next**
-2. Faça login com sua conta AMD e selecione **Download and Install Now** → **Next**
-3. Na tela **Select Product to Install**, escolha **Vitis** *(isso instala o Vitis e o Vivado juntos — não escolha só o Vivado)*
-4. Na tela **Select Extra Content**, deixe selecionado apenas:
-    
-    **Design Tools:**
-    
-    - ✅ Vitis
-    - ✅ Vivado
-    - ✅ Vitis HLS
-    - ✅ DocNav
-    
-    **Devices — 7 Series:**
-    
-    - ✅ Artix-7 FPGAs
-    
-    > Desmarque tudo o que não está listado acima. Isso reduz bastante o tamanho da instalação.
-    > 
-    
-    Clique em **Next**.
-    
-5. Aceite todos os termos de licença → **Next**
-6. Escolha o diretório de instalação → **Next**
-7. Revise o resumo e clique em **Install**
-
-> 💡 A instalação pode levar de 20 minutos a 2 horas. Fique por perto no final — alguns prompts vão aparecer pedindo confirmação.
-> 
+1. Access the AMD/Xilinx download page:
+   https://www.xilinx.com/support/download.html
+2. Locate the **Vivado™ Edition — 2025.1** section.
+3. Select the **Self Extracting Web Installer** for your operating system.
+4. Log in or create a free account to start the download.
 
 ---
 
-## 🗂️ 3. Instalar os Board Files da Nexys A7
+## 2. Install Vivado + Vitis
 
-Os Board Files ensinam o Vivado a reconhecer sua placa automaticamente, facilitando a criação de projetos.
+1. Run the downloaded installer and click **Next**.
+2. Log in with your AMD account and select **Download and Install Now** → **Next**.
+3. On the **Select Product to Install** screen, choose **Vitis**. 
+   *(Note: This installs both Vitis and Vivado together — do not choose Vivado only).*
+4. On the **Select Extra Content** screen, ensure only the following are selected:
 
-**Opção A — Direto pelo Vivado (mais fácil):**
+   **Design Tools:**
+   - [x] Vitis
+   - [x] Vivado
+   - [x] Vitis HLS
+   - [x] DocNav
 
-1. Abra o Vivado pelo menu Iniciar
-2. Clique em **Create Project** → **Next** → **Next**
-3. Quando chegar na tela de seleção de placa, clique em **Refresh** para atualizar a lista
-4. Pesquise por **Nexys A7** na barra de busca
-5. Clique no ícone de download ao lado da placa → confirme
+   **Devices — 7 Series:**
+   - [x] Artix-7 FPGAs
 
-**Opção B — Pelo GitHub da Digilent (mais atualizado):**
+> [!IMPORTANT]
+> Deselect everything not listed above. This significantly reduces the installation size.
 
-1. Baixe e extraia os board files do repositório oficial: https://github.com/Digilent/vivado-boards
-2. No Vivado, vá em **Tools → Settings**
-3. Vá em **Vivado Store → Board Repository**
-4. Clique no **+** e aponte para a pasta `vivado-boards/new/board_files`
-5. Clique em **OK**, feche e reabra o Vivado
+5. Accept all license terms → **Next**.
+6. Choose the installation directory → **Next**.
+7. Review the summary and click **Install**.
+
+> [!TIP]
+> Installation can take anywhere from 20 minutes to 2 hours. Stay nearby towards the end, as a few prompts may appear requesting confirmation.
 
 ---
 
-## 🔍 4. Selecionar o dispositivo correto da Nexys A7
+## 3. Install Nexys A7 Board Files
 
-Ao criar um novo projeto, quando chegar na tela de seleção de dispositivo, use os seguintes filtros:
+Board Files allow Vivado to automatically recognize your hardware, making project creation much easier.
+
+**Option A — Directly via Vivado (Recommended):**
+
+1. Open Vivado from the Start menu.
+2. Click **Create Project** → **Next** → **Next**.
+3. When you reach the board selection screen, click **Refresh** to update the list.
+4. Search for **Nexys A7** in the search bar.
+5. Click the download icon next to the board name and confirm.
+
+**Option B — Via Digilent GitHub (Manual):**
+
+1. Download and extract the board files from the official repository: https://github.com/Digilent/vivado-boards
+2. In Vivado, go to **Tools → Settings**.
+3. Navigate to **Vivado Store → Board Repository**.
+4. Click the **+** icon and point to the `vivado-boards/new/board_files` folder.
+5. Click **OK**, then close and reopen Vivado.
+
+---
+
+## 4. Selecting the Correct Nexys A7 Device
+
+When creating a new project, if you are selecting the device manually instead of using the board file, use these filters:
 
 - **Category:** General Purpose
 - **Family:** Artix-7
 - **Package:** csg324
 - **Speed:** -1
 
-Selecione o dispositivo que aparecer com essas especificações e clique em **Next**. Confira o resumo na janela **New Project Summary** e clique em **Finish**.
+Select the device that matches these specifications and click **Next**. Review the **New Project Summary** and click **Finish**.
 
 ---
 
-## ✅ 5. Tudo pronto!
+## 5. Setup Complete
 
-O ambiente está configurado. Agora é só seguir os primeiros tutoriais no GitHub da liga para começar a trabalhar com a placa:
+Your environment is now configured. You can follow the introductory tutorials in the league's repository to start working with the board.
 
-🔗 *Link do GitHub em breve*
+🔗 *Repository link coming soon*
