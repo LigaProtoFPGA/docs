@@ -6,26 +6,18 @@ This repository is the central knowledge base for **ProtoFPGA**. It contains all
 
 ## Table of Contents
 
-### Getting Started
-The first steps for new members, meeting schedules, and team dynamics.
-[Read more](./getting-started.md)
-
-### Software Setup
-Installation and configuration guides for **Vivado**, **Quartus**, **VS Code**, and **Git**.
-[Read more](./software.md)
-
-### Style Guide & Repository Standards
-Rules for naming conventions (snake_case), folder structures, and coding best practices.
-[Read more](./style-guide.md)
-
-### Infrastructure & Hardware
-List of available FPGA boards, laboratory guidelines, and technical resources.
-[Read more](./infrastructure.md)
+| Section | Purpose | Link |
+| :--- | :--- | :--- |
+| **Getting Started** | Onboarding, meetings, and team dynamics | [View](./getting-started.md) |
+| **Software Setup** | Installation of Vivado, Quartus, and ISE | [View](./software.md) |
+| **Git Guide** | Basic workflow for contributing to the Org | [View](./git-guide.md) |
+| **Style Guide** | Coding and repository standards | [View](./style-guide.md) |
+| **Infrastructure** | Laboratory rules and hardware resources | [View](./infrastructure.md) |
 
 ---
 
 ## How to Contribute
-1. Create a **Branch**.
+1. Create a new **Branch**.
 2. Update the relevant `.md` files.
 3. Open a **Pull Request** for review.
 
