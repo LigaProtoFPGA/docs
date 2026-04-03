@@ -1,105 +1,90 @@
-# Guia de Estilo - VHDL/Verilog e Repositório
+# Style Guide - VHDL/Verilog and Repository
 
-> > Este guia é uma **sugestão** de como organizar os projetos no repositório. Não é obrigatório seguir à risca, mas ter um padrão comum deixa o repositório mais fácil de navegar para todo mundo.
-> 
-
----
-
-## 📁 Estrutura de pastas no repositório
-
-- /tutorials → tutoriais introdutórios passo a passo
-- /examples → projetos de exemplo prontos para rodar
-- /templates → modelos padrão para novos projetos
-- /docs → documentação geral da liga
-- colocar pasta de recursos no github (drives e tals tipo ethernet, display etc..) - tem no repositório de hardware livre
-
-O ideal é que cada pasta tenha um arquivo **README.md** explicando o que contém.
+This guide provides a suggested structure for organizing projects within the repository. While not mandatory to follow strictly, maintaining a common pattern improves navigation and collaboration for everyone.
 
 ---
 
-## 🗂️ Nomenclatura de arquivos e pastas
+## Repository Folder Structure
 
-- Sugestão: use **snake_case** — letras minúsculas separadas por underline
-- Evite espaços, acentos ou caracteres especiais
+- `/tutorials` — step-by-step introductory guides
+- `/examples` — ready-to-run example projects
+- `/templates` — standard templates for new projects
+- `/docs` — general league documentation
+- `/resources` — shared resources (drivers, IPs for Ethernet, displays, etc.)
 
-✅ `contador_binario`
-✅ `somador_4bits`
-✅ `tutorial_introducao_vhdl`
-
-❌ `ContadorBinario`
-❌ `somador 4 bits`
-❌ `Tutorial-Introdução`
+Every folder should ideally contain a **README.md** file explaining its contents.
 
 ---
 
-## 🗃️ Estrutura de cada projeto
+## File and Folder Naming
 
-Uma organização sugerida para cada projeto no repositório:
+- Use **snake_case** — lowercase letters separated by underscores.
+- Avoid spaces, accents, or special characters.
 
-- /nome_do_projeto
-    - README.md → descrição do projeto
-    - src/ → arquivos fonte (.vhd ou .v)
-    - sim/ → arquivos de simulação (testbenches)
-    - constraints/ → arquivo de constraints (.xdc)
+✅ `binary_counter`
+✅ `adder_4bits`
+✅ `vhdl_intro_tutorial`
+
+❌ `BinaryCounter`
+❌ `adder 4 bits`
+❌ `Intro-Tutorial`
 
 ---
 
-## 📝 Modelo de README para cada projeto
+## Project Structure
 
-Sugestão de modelo para o README.md do seu projeto:
+Suggested organization for individual projects:
 
-**# Nome do Projeto**
+- `/project_name`
+    - `README.md` — project description and usage
+    - `src/` — source files (.vhd or .v)
+    - `sim/` — simulation files (testbenches)
+    - `constraints/` — constraint files (.xdc or .sdc)
 
-**## Descrição**
-O que esse projeto faz em 2-3 linhas.
+---
 
-**## Placa utilizada**
-Ex: Nexys A7 (Artix-7)
+## README Template for Projects
 
-**## Linguagem**
+Suggested model for your project's **README.md**:
+
+# Project Name
+
+## Description
+A 2-3 line summary of what this project does.
+
+## Board
+Example: Nexys A7 (Artix-7)
+
+## Language
 VHDL / Verilog
 
-**## Como simular**
-Passos para rodar a simulação no Vivado.
+## How to Simulate
+Steps to run the simulation (e.g., in Vivado or ModelSim).
 
-**## Como sintetizar**
-Passos para gerar o bitstream e programar a placa.
+## How to Synthesize
+Steps to generate the bitstream and program the board.
 
-**## Autor**
-Nome — data
-
----
-
-## ✍️ Convenções de código
-
-**Nomes de entidades e módulos**
-Use snake_case, nomes descritivos em inglês ou português — escolha um e mantenha em todo o projeto.
-
-✅ `entity contador_binario is`
-✅ `module somador_4bits`
-
-**Indentação**
-Use 2 ou 4 espaços — escolha um e tente manter em todo o arquivo. Evite misturar espaços e tabs.
-
-**Comentários**
-Uma boa prática é adicionar um comentário no topo de cada arquivo explicando o que ele faz:
-
-- `- Projeto: Contador binário de 4 bits- Autor: Seu Nome- Data: DD/MM/AAAA- Descrição: Contador síncrono com reset assíncrono`
-
-**Sinais ativos em baixo**
-Uma convenção comum é usar o sufixo `_n` para indicar sinal ativo em nível baixo.
-
-✅ `reset_n`
-✅ `clr_n`
+## Author
+Name — Date
 
 ---
 
-## ✅ Checklist sugerido antes de subir qualquer coisa
+## Coding Conventions
 
-> 💡 Uma referência rápida para não esquecer nada importante.
-> 
-- [ ]  A pasta do projeto tem uma organização clara
-- [ ]  O arquivo README.md está preenchido
-- [ ]  Nomes de arquivos e pastas sem espaços ou acentos
-- [ ]  Comentário de cabeçalho no topo dos arquivos fonte
-- [ ]  A mensagem do commit descreve o que foi feito
+**Entity and Module Names**
+Use snake_case with descriptive names. Choose one language (English or Portuguese) and maintain it throughout the project.
+
+✅ `entity binary_counter is`
+✅ `module adder_4bits`
+
+**Indentation**
+Use 2 or 4 spaces. Pick one and remain consistent throughout the file. Avoid mixing spaces and tabs.
+
+**Comments**
+Include a header comment at the top of every file:
+
+```vhdl
+-- Project: 4-bit Binary Counter
+-- Author: Your Name
+-- Date: DD/MM/YYYY
+-- Description: Synchronous counter with asynchronous reset
