@@ -1,28 +1,27 @@
-# Infraestrutura
+# Infrastructure
 
-O Lab 124a é o espaço físico da liga dentro da UFSC Araranguá, campus Jardim das Avenidas. É onde acontecem os encontros presenciais e onde os membros podem trabalhar nos projetos.
-
----
-
-## 📍 Localização
-
-UFSC Araranguá — campus Jardim das Avenidas
-Laboratório 124a
+Lab 124a is the league's physical space at UFSC Araranguá, Jardim das Avenidas campus. This is where in-person meetings take place and where members can work on their projects.
 
 ---
 
-## 🖥️ Recursos disponíveis
+## Location
+
+UFSC Araranguá — Jardim das Avenidas campus
+Laboratory 124a
+
+---
+
+## Available Resources
 
 **PCs**
-A sala conta com computadores já configurados com os softwares necessários para os projetos da liga (Vivado, ISE). Nenhuma instalação adicional é necessária para usar as máquinas do lab.
+The laboratory is equipped with computers already configured with the necessary software for the league's projects (Vivado, ISE). No additional installation is required to use the lab machines.
 
-**Kits e placas FPGA**
-A confirmar.
+**FPGA Kits and Boards**
+To be confirmed.
 
-**Instrumentos**
-A sala conta com equipamentos de bancada como fonte de alimentação, osciloscópio e multímetro. A relação completa será confirmada em breve.
+**Instruments**
+The room features bench equipment such as power supplies, oscilloscopes, and multimeters. A complete list of available equipment will be provided soon.
 
 ---
 
-> 📬 Qualquer dúvida, fale com a diretoria da liga.
->
+> If you have any questions, please contact the league board.
