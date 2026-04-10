@@ -75,7 +75,7 @@ When creating a new project, if you are selecting the device manually instead of
 - **Package:** csg324
 - **Speed:** -1
 
-Select the device that matches these specifications and click **Next**. Review the **New Project Summary** and click **Finish**.
+Select the device that matches these specifications (xc7a100tcsg324-1) and click **Next**. Review the **New Project Summary** and click **Finish**.
 
 ---
 
