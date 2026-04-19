@@ -116,4 +116,4 @@ If a license error appears during the **Implement Design → Map** step, follow 
 
 The environment is configured. Now just follow the first tutorials on the league's GitHub to start working with the board:
 
-🔗 [Tutorials](./tutorials/)
+🔗 [Tutorials](https://github.com/LigaProtoFPGA/tutorials)
