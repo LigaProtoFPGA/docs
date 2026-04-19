@@ -81,10 +81,10 @@ Open a terminal inside the VM and edit the `~/.bashrc` file:
 
 `nano /home/ise/.bashrc`
 
-Add the following two lines at the end of the file:
+Add the license server information at the end of the file.
 
-`export LM_LICENSE_FILE=2100@172.65.212.135:8888`
-`export XILINXD_LICENSE_FILE=2100@paxos.inf.pucrs.br:8888`
+> [!NOTE]
+> Contact a board member to obtain the license server details.
 
 Save with `Ctrl+O` and exit with `Ctrl+X`.
 
@@ -112,9 +112,8 @@ If a license error appears during the **Implement Design → Map** step, follow 
 5. Click OK and run the VM again.
 
 ---
-
 ## ✅ 8. All set!
 
 The environment is configured. Now just follow the first tutorials on the league's GitHub to start working with the board:
 
-🔗 *GitHub link coming soon*
+🔗 [Tutorials](./tutorials/)
