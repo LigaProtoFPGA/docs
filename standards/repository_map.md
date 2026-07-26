@@ -12,7 +12,7 @@ Grouped by purpose.
 | --- | --- | --- |
 | [`tutorials`](https://github.com/LigaProtoFPGA/tutorials) | Guides that teach one specific task, with the reasoning written out | "Blink an LED on the Nexys A7" |
 | [`courses`](https://github.com/LigaProtoFPGA/courses) | Complete course material: a sequence, an instructor, a term | Prof. Ney's MIPS_S course |
-| `examples` | Working designs to clone and run. Code without narration | Coursework, finished modules, reference implementations |
+| [`study_material`](https://github.com/LigaProtoFPGA/study_material) | Lecture slides and reference material on a subject. No schedule, no sequence | Prof. Ney's slides on caches, pipelines and computer arithmetic |
 
 ### Reference
 
@@ -22,14 +22,13 @@ Grouped by purpose.
 
 ### Projects
 
-One repository per project, named `proj_<name>`, owned by the team working on it.
+One repository per project, named `proj_<name>`, owned by the team working on it. The
+prefix keeps them together in the
+[Repositories](https://github.com/orgs/LigaProtoFPGA/repositories) tab, so there is no
+list to maintain anywhere.
 
-| Repository | Team | Status |
-| --- | --- | --- |
-| | | |
-
-Separate repositories, rather than one shared one, because each team then controls
-write access to its own work, the history stays readable, and a finished project can be
+Separate repositories, rather than one shared one, because each team then controls write
+access to its own work, the history stays readable, and a finished project can be
 archived without disturbing anything else.
 
 ### Institutional
@@ -55,29 +54,38 @@ Ask the questions in order and stop at the first yes.
 4. **Does it teach one specific task, with the reasoning explained?**
    → `tutorials`
 
-5. **Is it code that works, offered without explanation?**
-   → `examples`
+5. **Does it teach a subject, with no schedule attached — slides, notes, reference
+   presentations?**
+   → `study_material`
 
-6. **Is it ongoing work by a team?**
+6. **Is it work by a league team?**
    → its own `proj_` repository
 
-7. **Is it internal — minutes, proposals, personal data?**
+7. **Is it your own coursework, or a personal project?**
+   → your own GitHub account. It is your work, not the league's.
+
+8. **Is it internal — minutes, proposals, personal data?**
    → Not on GitHub. Drive.
 
 ### Cases that trip people up
 
-**A tutorial or an example?** A tutorial teaches — it explains why each step is what it
-is, and you read it. An example demonstrates — you clone it and run it. Same code, but
-if the explanation is missing on purpose, it is an example.
-
 **A tutorial or a course?** A tutorial is done in an afternoon. A course has a sequence,
 a term and someone teaching it.
+
+**A course or study material?** A course is something the league runs: it has an
+instructor, a term and a sequence you work through. Study material is a library — slides
+and notes you consult when a project needs the subject. Same author, different use.
 
 **A datasheet.** Never committed anywhere. It goes in `reference.md` as an entry, with a
 note on which chapter matters, and the file stays in the Drive.
 
-**Code written for a course.** Stays with the course, in `courses`. It moves to
-`examples` only if it becomes useful on its own, outside the course.
+**Code written for a course.** Stays with the course, in `courses`.
+
+**A league project or your own work?** A league project is worked on by a team and
+outlives whoever started it — it belongs in the organization. Coursework and personal
+projects stay in the author's own account, where the contribution history stays with
+them. Members can pin organization repositories to their personal profile, so working on
+a league project is visible there too.
 
 ## Rules that apply everywhere
 
