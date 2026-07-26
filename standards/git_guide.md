@@ -56,7 +56,7 @@ Cloning means downloading the repository to your machine.
    * **Tip:** In Windows Explorer, navigate to the folder where you want to save the repo, click the address bar, type `cmd`, and hit Enter—the terminal will open directly in the correct folder.
 2. Run the following command:
    ```bash
-   git clone [https://github.com/link-to-repository](https://github.com/link-to-repository)
+   git clone https://github.com/LigaProtoFPGA/tutorials
    ```
    A folder with all the files will be created in your chosen location.
 
@@ -118,4 +118,3 @@ This happens when two people edit the same line of the same file at the same tim
 * GitHub Desktop: [desktop.github.com](https://desktop.github.com)
 * Official Git Documentation: [git-scm.com/doc](https://git-scm.com/doc)
 * GitHub Docs: [docs.github.com](https://docs.github.com)
-```

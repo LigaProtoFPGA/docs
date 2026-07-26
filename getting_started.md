@@ -7,9 +7,9 @@ Welcome to the league! This guide is your starting point. Follow these steps in 
 ## 1. Software Installation
 Before anything else, you need to set up the environment on your machine. Identify which board you will be using and follow the corresponding tutorial:
 
-* [Software Setup Overview](./software.md)
-* [Vivado (Nexys A7)](./setup-vivado.md)
-* [ISE VM (Nexys 1 & 2)](./setup-ise-vm.md)
+* [Software Setup Overview](setup/software.md)
+* [Vivado (Nexys A7)](setup/vivado.md)
+* [ISE VM (Nexys 1 & 2)](setup/ise_vm.md)
 
 > [!TIP]
 > If you are unsure which board you have, ask a senior member or the professor before installing anything.
@@ -18,7 +18,7 @@ Before anything else, you need to set up the environment on your machine. Identi
 
 ## 2. Git & GitHub Basics
 Learn how to clone our repositories and upload your code.
-* [Git Guide](./git-guide.md)
+* [Git Guide](standards/git_guide.md)
 
 ---
 

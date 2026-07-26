@@ -17,7 +17,8 @@ Laboratory 124a
 The laboratory is equipped with computers already configured with the necessary software for the league's projects (Vivado, ISE). No additional installation is required to use the lab machines.
 
 **FPGA Kits and Boards**
-To be confirmed.
+To be confirmed. Manuals and technical documentation for the boards we work with are
+catalogued in [reference](reference.md).
 
 **Instruments**
 The room features bench equipment such as power supplies, oscilloscopes, and multimeters. A complete list of available equipment will be provided soon.

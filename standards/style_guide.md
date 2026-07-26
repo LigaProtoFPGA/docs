@@ -6,11 +6,13 @@ This guide provides a suggested structure for organizing projects within the rep
 
 ## Repository Folder Structure
 
-- `/tutorials` — step-by-step introductory guides
-- `/examples` — ready-to-run example projects
-- `/templates` — standard templates for new projects
-- `/docs` — general league documentation
-- `/resources` — shared resources (drivers, IPs for Ethernet, displays, etc.)
+- `tutorials` — step-by-step guides for one specific task
+- `courses` — complete material from the courses the league runs
+- `examples` — working designs to clone and run
+- `docs` — how the league works, and the reference catalogue
+- `proj_<name>` — one repository per project, owned by its team
+
+See the [repository map](repository_map.md) for how to decide where something goes.
 
 Every folder should ideally contain a **README.md** file explaining its contents.
 
@@ -88,3 +90,4 @@ Include a header comment at the top of every file:
 -- Author: Your Name
 -- Date: DD/MM/YYYY
 -- Description: Synchronous counter with asynchronous reset
+```
