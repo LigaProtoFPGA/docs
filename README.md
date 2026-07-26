@@ -49,13 +49,5 @@ the league's Drive.
 
 ---
 
-## How to Contribute
-
-1. Create a new **Branch**.
-2. Update the relevant `.md` files.
-3. Open a **Pull Request** for review.
-
----
-
 **Mentors:** Prof. Ney & Prof. Rodrigo
 **University:** UFSC (Universidade Federal de Santa Catarina)
