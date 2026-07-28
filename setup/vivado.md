@@ -1,7 +1,7 @@
 # Vivado + Vitis Installation Guide (Nexys A7 — Artix-7)
 
 > [!CAUTION]
-> Allocate at least **2 hours** and **85 GB** of disk space. This is a heavy installation, but it only needs to be done once.
+> Allocate at least **2 hours** and **85 GB** of disk space, the disk or partition where Vivado will be installed must be formatted in **NTFS**, forms such as FAT32 or exFAT are not compatible. This is a heavy installation, but it only needs to be done once.
 
 ---
 
