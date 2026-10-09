@@ -13,16 +13,36 @@ Stop at the first yes.
 | Is it a complete course, with an instructor and a sequence? | [`courses`](https://github.com/LigaProtoFPGA/courses), one folder per course |
 | Does it teach one specific task, doable in an afternoon? | [`tutorials`](https://github.com/LigaProtoFPGA/tutorials) |
 | Is it slides or notes on a subject, with no schedule? | [`study_material`](https://github.com/LigaProtoFPGA/study_material) |
-| Is it a project worked on by a league team? | Its own repository, named `proj_<name>` |
-| Is it your own coursework or a personal project? | Your own GitHub account |
+| Is it a hardware project the league builds or reuses? | Its own repository (see [projects](#projects)) |
+| Is it a personal project nobody else in the league works on or uses? | Your own GitHub account |
 | Is it internal: minutes, proposals, personal data? | The league's Drive, not GitHub |
 
-Code written for a course stays with the course.
+Code written for a course the league runs stays with the course, in `courses`.
+
+## Projects
+
+Each project gets its own repository, so the team working on it controls its history and
+the repository can be archived when the work ends. These are the league's projects today:
+
+| Repository | What it is |
+| --- | --- |
+| [`mips-s-multiplier`](https://github.com/LigaProtoFPGA/mips-s-multiplier) | Booth radix-4 multiplier for the MIPS_S processor, compared with the original serial one |
+| [`FPGA-Based-IEEE-754-vs.-Posit-vs.-Takum-Arithmetic-`](https://github.com/LigaProtoFPGA/FPGA-Based-IEEE-754-vs.-Posit-vs.-Takum-Arithmetic-) | Research in progress: IEEE-754, Posit and Takum arithmetic compared in hardware |
+| [`vhdl_chronometers`](https://github.com/LigaProtoFPGA/vhdl_chronometers) | Countdown timer and basketball game clock, Nexys 1/2 |
+| [`mips_s_text_peripheral`](https://github.com/LigaProtoFPGA/mips_s_text_peripheral) | Memory-mapped peripheral that copies and displays a text on MIPS_S, Nexys 2 |
+
+The last two started as coursework for the Hardware Description Languages course and
+stayed in the organization because the league builds on them: the basketball clock, for
+example, was ported to the Nexys A7 for the SAEC 2026 mini-course.
+
+A project belongs here when it is league work (a research line, a hardware improvement,
+something presented in the league's name) or when other members are expected to build on it. Add it to the table above when you create it.
 
 ## Rules for every repository
 
-- **Names:** snake_case, no spaces, no accents (`binary_counter`, not `BinaryCounter` or
-  `binary counter`).
+- **Names:** short, lowercase, no spaces and no accents. Prefer snake_case for new
+  repositories, files and folders (`binary_counter`, not `BinaryCounter` or
+  `binary counter`). Existing repositories keep their names.
 - **Every folder has a `README.md`** saying what is in it and how to use it.
 - **Language:** repository documentation is in English. Course material can stay in the
   language it was taught in; say so in the README.
@@ -32,12 +52,12 @@ Code written for a course stays with the course.
 - **Privacy:** no CPFs, addresses, phone numbers, license server details or private
   documents in a public repository.
 
-## Hardware projects
+## Project layout
 
-A layout that works well for a VHDL or Verilog project:
+A layout that works well for a VHDL or Verilog project (see `mips-s-multiplier`):
 
 ```
-proj_<name>/
+<project>/
 ├── README.md   what it does, which board, how to simulate and build
 ├── rtl/        design sources (.vhd, .v)
 ├── sim/        testbenches
