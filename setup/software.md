@@ -1,21 +1,15 @@
-# Software Setup
+# Which software do I need?
 
-Before installing, check which software corresponds to your specific FPGA board.
+It depends on the board.
 
-| Board Model | Required Software | Guide |
-| :--- | :--- | :--- |
-| **Nexys A7 (Artix-7)** | Vivado + Vitis | [Installation Guide](vivado.md) |
-| **Nexys 1 & 2** | ISE 14.7 (Virtual Machine) | [VM Setup Guide](ise_vm.md) |
+| Board | FPGA | Toolchain | Runs on | Guide |
+| --- | --- | --- | --- | --- |
+| Nexys A7 | Artix-7 | Vivado | Windows or Linux | [Vivado](vivado.md) |
+| Nexys 1 / Nexys 2 | Spartan-3 / Spartan-3E | ISE 14.7, inside a virtual machine | Windows (the guide is written for Windows hosts) | [ISE VM](ise_vm.md) |
 
----
+Vivado does not support Spartan-3 or Spartan-3E devices, which is why the older boards
+need ISE.
 
-### Nexys A7 — Artix-7
-Official AMD/Xilinx tool for synthesis, implementation, and embedded development. 
-* **Platform:** Windows or Linux
-* **Space Required:** ~85GB
-* [Go to Vivado Installation](vivado.md)
+Neither tool runs natively on macOS. On a Mac, use the lab PCs.
 
-### Nexys 1 and Nexys 2
-Pre-configured environment with all tools installed. Works on any operating system via VM.
-* **Platform:** Windows, Linux, or macOS
-* [Go to ISE VM Setup](ise_vm.md)
+Everyone also needs Git: see the [Git guide](git.md).

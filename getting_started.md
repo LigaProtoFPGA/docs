@@ -1,35 +1,31 @@
-# Getting Started
+# Getting started
 
-Welcome to the league! This guide is your starting point. Follow these steps in order to stay on track.
+Welcome to the league. Do these in order.
 
----
+## 1. Install the toolchain
 
-## 1. Software Installation
-Before anything else, you need to set up the environment on your machine. Identify which board you will be using and follow the corresponding tutorial:
+Check which board you will use, then follow [which software do I need?](setup/software.md).
+If you are not sure which board you will use, ask a senior member
+before installing anything: Vivado is a large download.
 
-* [Software Setup Overview](setup/software.md)
-* [Vivado (Nexys A7)](setup/vivado.md)
-* [ISE VM (Nexys 1 & 2)](setup/ise_vm.md)
+You can also skip this step for now and work on the lab PCs, which already have
+everything installed.
 
-> [!TIP]
-> If you are unsure which board you have, ask a senior member or the professor before installing anything.
+## 2. Learn the Git basics
 
----
+Follow the [Git guide](setup/git.md) to clone our repositories and send your work.
 
-## 2. Git & GitHub Basics
-Learn how to clone our repositories and upload your code.
-* [Git Guide](standards/git_guide.md)
+## 3. Do your first project
 
----
+| Board | Start here |
+| --- | --- |
+| Nexys A7 | [`tutorials/vivado/vivado_intro.md`](https://github.com/LigaProtoFPGA/tutorials/blob/main/vivado/vivado_intro.md), then [`vivado_workflow.md`](https://github.com/LigaProtoFPGA/tutorials/blob/main/vivado/vivado_workflow.md) |
+| Nexys 1 / Nexys 2 | [`tutorials/ise/`](https://github.com/LigaProtoFPGA/tutorials/tree/main/ise) |
 
-## 3. Follow Introductory Tutorials
-Once your environment is ready, follow the introductory tutorials in the order listed in our main repositories.
+Keep the [Nexys A7 page](boards/nexys_a7.md) open while you work: it has the pins and the
+settings that cause most first-time problems.
 
-*Introductory links coming soon.*
+## Stuck?
 
----
-
-## Stuck on a Step?
-* Double-check the tutorials from the beginning.
-* Ask in the league's communication group.
-* Reach out to a senior member.
+Ask in the league's group or reach out to a senior member. If a guide here is wrong or out
+of date, say so, or fix it yourself (see [contributing](CONTRIBUTING.md)).

@@ -1,11 +1,12 @@
 # ISE 14.7 VM Installation (Nexys 1 and 2)
 
 > [!CAUTION]
-> You will need at least **20 GB** of free disk space and a lot of patience — some steps take a long time.
+> You will need at least **20 GB** of free disk space and a lot of patience: some steps take a long time.
+> This guide is written for a **Windows** host. The download links below are for Windows.
 
 ---
 
-## 📦 1. Download Packages
+## 1. Download Packages
 
 - **Oracle VirtualBox 7.1.0** → [Download](https://download.virtualbox.org/virtualbox/7.1.0/VirtualBox-7.1.0-164728-Win.exe)
 - **VirtualBox Extension Pack 7.1.0** → [Download](https://download.virtualbox.org/virtualbox/7.1.0/Oracle_VirtualBox_Extension_Pack-7.1.0.vbox-extpack)
@@ -13,7 +14,7 @@
 
 ---
 
-## 🔧 2. Prerequisites before installing VirtualBox
+## 2. Prerequisites before installing VirtualBox
 
 If the VirtualBox installer complains about dependencies, install them in this order:
 
@@ -30,14 +31,14 @@ Open the Command Prompt and run:
 
 ---
 
-## ⚙️ 3. Install VirtualBox
+## 3. Install VirtualBox
 
 1. Install VirtualBox normally.
 2. When opening for the first time, accept the installation of the **Extension Pack** (the `.vbox-extpack` file downloaded in step 1).
 
 ---
 
-## 📂 4. Import the ISE 14.7 VM
+## 4. Import the ISE 14.7 VM
 
 1. Unzip the file downloaded from AMD *(this takes a while)*.
 2. Open VirtualBox → **File** menu → **Import Appliance**.
@@ -49,7 +50,7 @@ Open the Command Prompt and run:
 
 ---
 
-## 🛠️ 5. Configure the VM before running
+## 5. Configure the VM before running
 
 With the VM **turned off**, open its settings in VirtualBox:
 
@@ -75,7 +76,7 @@ To create a shortcut on the VM's Desktop, open a terminal inside the VM and run:
 
 ---
 
-## 🔑 6. Configure the License
+## 6. Configure the License
 
 Open a terminal inside the VM and edit the `~/.bashrc` file:
 
@@ -101,19 +102,13 @@ Save and exit.
 
 ---
 
-## ⚠️ 7. License error during "Map"?
+## 7. License error during "Map"?
 
-If a license error appears during the **Implement Design → Map** step, follow these steps:
-
-1. Note the `hostid` mentioned in the error.
-2. Close the VM.
-3. In VirtualBox, go to **Network → Adapter 1 → Advanced**.
-4. Change the **MAC Address** to: `08002768C935`
-5. Click OK and run the VM again.
+If a license error appears during **Implement Design → Map**, note the `hostid` shown in
+the error message and contact a board member. Do not try to work around it yourself.
 
 ---
-## ✅ 8. All set!
+## 8. All set!
 
-The environment is configured. Now just follow the first tutorials on the league's GitHub to start working with the board:
-
-🔗 [Tutorials](https://github.com/LigaProtoFPGA/tutorials)
+The environment is configured. Next: the ISE tutorials in
+[`tutorials/ise/`](https://github.com/LigaProtoFPGA/tutorials/tree/main/ise).
