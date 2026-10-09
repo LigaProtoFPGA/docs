@@ -21,17 +21,22 @@ the reference for external memory controller work.
 
 The keyboard connector is PS/2, not USB.
 
-### Nexys A7
+### Nexys 1 and Nexys 2
 
 | | |
 | --- | --- |
-| FPGA | AMD Artix-7, XC7A100T or XC7A50T |
-| Toolchain | Vivado. Not supported by the Digilent Adept utility. |
-| Reference manual | https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual |
+| FPGA | Nexys 1: Xilinx Spartan-3 (xc3s200-4ft256). Nexys 2: Xilinx Spartan-3E (xc3s1200e-4fg320) |
+| Clock | 50 MHz |
+| Toolchain | ISE 14.7, in a virtual machine ([setup](setup/ise_vm.md)). Not supported by Vivado |
 
-System clock is a 100 MHz oscillator on pin E3. The board carries four Pmod connectors
-plus the XADC analog Pmod port. It is a rebrand of the Nexys 4 DDR, so Nexys 4 DDR
-documentation applies with minimal deviation.
+The Nexys 2 has a 4-digit display, 4 buttons and 8 switches, which is why
+projects written for it (such as the league's chronometers) use some inputs for more than
+one function.
+
+### Nexys A7
+
+See the [Nexys A7 page](boards/nexys_a7.md): part number, reference manual, master XDC and
+pin tables.
 
 ### Pmod OLED display
 
@@ -86,10 +91,6 @@ open-source RISC-V SoC from the same group Profs. Ney and Moraes come from.
 | RS5-SoC: A Flexible Open-Source RISC-V Platform for Embedded Systems — Faccenda et al., PUCRS | |
 
 Both are IEEE publications, accessed through IEEE Xplore.
-
-> Older league records cite the first one as an ICECS'24 paper about drone emulation. It
-> is from **ICECS 2025** and is about a hardware-in-the-loop framework for sensor-rich
-> embedded systems. Citations should be corrected.
 
 ## Books
 
